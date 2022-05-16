@@ -13,7 +13,7 @@ function new_form () {
                 </div>
                 <div className="form-group">
                     <label htmlFor="pic">Place Picture</label>
-                    <input className="form-control" id="pic" name="pic" />
+                    <input type="url" id="pic" name="pic" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="city">City</label>
@@ -29,7 +29,6 @@ function new_form () {
                 </div>
                     <input className="btn btn-primary" type="submit" value="Add Place" />
             </form>
-
           </main>
         </Def>
     )
