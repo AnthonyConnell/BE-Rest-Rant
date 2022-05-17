@@ -3,6 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const methodOverride = require('method-override')
 const app = express()
+const PORT = process.env.PORT
 
 // Express Settings
 app.set('views', __dirname + '/views')
