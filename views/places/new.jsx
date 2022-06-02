@@ -40,7 +40,7 @@ function new_form () {
                                     />
                         </div>
                     </div>
-                        <div className="form-group">
+                        <div className="form-group col-sm-6">
                             <label htmlFor="cuisines">Cuisines*</label>
                             <input className="form-control" 
                                     id="cuisines" 
@@ -55,7 +55,7 @@ function new_form () {
                             className="form-control"
                             id="founded"
                             name="founded"
-                            value={new Date().getFullYear()} />
+                            defaultvalue={new Date().getFullYear()} />
                         </div>
                     <input className="btn btn-primary" type="submit" value="Add Place" />
                 </form>
