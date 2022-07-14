@@ -2,12 +2,13 @@
   "name": "be-rest-rant",
   "version": "1.0.0",
   "engines": {
-    "node": "16.13.1"
+    "node": "16.14.2"
   },
   "description": "Rest-Rant is an app where users can review restaurants",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js" 
   },
   "repository": {
     "type": "git",
