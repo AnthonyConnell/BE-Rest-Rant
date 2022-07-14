@@ -34,5 +34,5 @@ app.get("*", (req, res) => {
 
 // Listen for Connections - keeps server open
 app.listen(process.env.PORT, function () {
-  console.log("I am awake!");
+  console.log("You summoned me?");
 });
