@@ -1,48 +1,79 @@
 const React = require('react')
-const Def = require('../default.jsx')
+const Default = require('../default')
 
-function edit_form (data) {
+function edit(data) {
 	return (
-        <Def>
-            <main>
-                <h1>Edit Place</h1>
-                <form action={`/places/${data.place.id}?_method=PUT`}  method="POST">
-				<div className='row'>
-                    <div className='form-group col-sm-6'>
-                        <label htmlFor='name'>Place Name</label> 
-                        <input className='form-control' id='name' name='name' value={data.place.name} required />
-                    </div>
-					<div className='form-group col-sm-6'>
-                        <label htmlFor="pic">Place Picture</label>
-                        <input className='form-control' type="url" id="pic" name="pic" value={data.place.pic} />
-                    </div>
-				</div>	
-				<div className='row'>
-                    <div className='form-group col-sm-6'>
-                        <label htmlFor="city">City Name</label>
-                        <input className='form-control' type="text" id="city" name="city" value={data.place.city} />
-                    </div>
-                    <div className='form-group col-sm-6'>
-                        <label htmlFor="state">State Name</label>
-                        <input className='form-control' type="text" id="state" name="state" value={data.place.state} />
- 					</div>
-				</div>
-				<div className='row'>
+		<Default>
+			<main>
+				<h2>Edit a Place</h2>
+				<form action={`/places/${data.place.id}?_method=PUT`} method='POST'>
+					<div className='row'>
 						<div className='form-group col-sm-6'>
-							<label htmlFor="cuisines">Cuisines</label>
-							<input className='form-control' type="text" id="cuisines" name="cuisines" value={data.place.cuisines} required />
+							<label htmlFor='name'>Place Name</label>
+							<input 
+								className='form-control' 
+								id='name' 
+								name='name' 
+								type="text" 
+								required
+								defaultValue={data.place.name}
+							/>
 						</div>
 						<div className='form-group col-sm-6'>
-							<label htmlFor="founded">Founded</label>
-							<input className='form-control' type="text" id="founded" name="founded" value={data.place.founded} required />
+							<label htmlFor='pic'>Place Picture</label>
+							<input 
+								className='form-control' 
+								id='pic' 
+								name='pic' 
+								type="url"
+								defaultValue={data.place.pic}
+							/>
 						</div>
-				</div>     
-                    <input className='btn btn-primary' type='submit' value='Edit Place' />
-                </form>
-            </main>
-        </Def>
-    )
-
+					</div>
+					<div className='row'>
+						<div className='form-group col-sm-6'>
+							<label htmlFor="city">City</label>
+							<input 
+								className='form-control' 
+								id='city' 
+								name='city' 
+								type="text"
+								defaultValue={data.place.city}
+							/>
+						</div>
+						<div className='form-group col-sm-6'>
+							<label htmlFor="state">State</label>
+							<input 
+								className='form-control' 
+								id="state" 
+								name='state' 
+								type="text"
+								defaultValue={data.place.state}
+							/>
+						</div>
+					</div>
+					<div className='form-group'>
+						<label htmlFor="cuisines">Cuisines</label>
+						<input 
+							className='form-control' 
+							id='cuisines' 
+							name='cuisines' 
+							type="text"
+							required
+							defaultValue={data.place.cuisines}
+						/>
+					</div>
+					<input 
+						className='btn btn-primary' 
+						type="submit" 
+						value='Update Place'
+					/>
+				</form>
+				<hr />
+				<a href="/places"><button className='btn-primary'>Back</button></a>
+			</main>
+		</Default>
+	)
 }
 
-module.exports = edit_form
+module.exports = edit
